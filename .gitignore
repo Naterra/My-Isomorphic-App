@@ -4,8 +4,12 @@
 #developement
 /config/dev.js
 
+
+#build
+build_server
+
 .DS_Store
 .idea
 
-build_server
+
 server/db/
