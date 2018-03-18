@@ -307,6 +307,10 @@ var _createStore = __webpack_require__(22);
 
 var _createStore2 = _interopRequireDefault(_createStore);
 
+var _config = __webpack_require__(29);
+
+var _config2 = _interopRequireDefault(_config);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
@@ -349,8 +353,11 @@ app.get('*', function (req, res) {
     });
 });
 
-app.listen(3000, function () {
-    console.log('Listen on port 3000');
+// Set  port
+app.set('port', process.env.PORT || _config2.default.serverPort);
+
+app.listen(app.get('port'), function () {
+    console.log('Listen on port ' + app.get('port'));
 });
 
 /***/ }),
@@ -1063,6 +1070,51 @@ exports.default = function () {
         default:
             return state;
     }
+};
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (process.env.NODE_ENV === 'production') {
+    // we are in production
+    module.exports = __webpack_require__(30);
+} else {
+    // we are in developement
+    module.exports = __webpack_require__(31);
+}
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+    "apiPrefix": "http://localhost:3000/",
+    "serverPort": "3000",
+    "cookieKey": process.env.cookieKey,
+    "mongo_URL": process.env.mongo_URL,
+    "googleAuth": {}
+};
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+    "apiPrefix": "http://localhost:3000/",
+    "serverPort": "3000",
+    "cookieKey": "jhgbdjfjdkfdlmf;l;pkkm",
+    "mongo_URL": "",
+    "googleAuth": {}
 };
 
 /***/ })

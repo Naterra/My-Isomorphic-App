@@ -1,5 +1,5 @@
 *~
 .DS_Store
 .idea
-/server/node_modules
-/server/build
+node_modules
+build_server
