@@ -39184,7 +39184,7 @@ var Home = function Home() {
 		_react2.default.createElement(
 			'h3',
 			null,
-			'Welcome'
+			'Welcome home'
 		),
 		_react2.default.createElement(
 			'p',
