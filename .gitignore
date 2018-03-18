@@ -1,6 +1,11 @@
-*~
+# dependencies
+/node_modules
+
+#developement
+/config/dev.js
+
 .DS_Store
 .idea
-node_modules
+
 build_server
 server/db/
