@@ -51,8 +51,9 @@ app.get('*', (req, res) => {
 
 
 // Set  port
+console.log('PROCESS_PORT', process.env.PORT);
 app.set('port', process.env.PORT || config.serverPort);
 
 app.listen(app.get('port'), () => {
-	console.log('Listen on port '+app.get('port'));
+	console.log('Listen on gggg port '+app.get('port'));
 });
