@@ -1,7 +1,7 @@
 {
   "name": "react-ssr",
   "version": "1.0.0",
-  "description": "Server side rendering project",
+  "description": "Server side rendering project ",
   "main": "index.js",
   "engines": {
     "node": "9.0.0",
@@ -14,6 +14,7 @@
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch",
     "prod:compile_server":"babel server -d build_server --presets es2017,stage-1",
+    "prod:kyky":"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false  npm install && npm run prod:compile_server"
   },
   "author": "",
