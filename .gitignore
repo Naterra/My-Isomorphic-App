@@ -2,8 +2,8 @@
 /node_modules
 
 #developement
-config/dev.js
-config/prod.js
+/config/dev.js
+/config/prod.js
 
 
 #build
