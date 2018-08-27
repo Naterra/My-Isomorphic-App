@@ -1,5 +1,8 @@
 ## App
 
+#### initialize a Git
+<pre><code>git init</code></pre>
+
 #### Run Development Version on localhost:3000
 <pre><code>npm run dev</code></pre>
 
@@ -10,9 +13,8 @@ it will generate a build_server folder
 
 
 #### Heroku
-<pre><code>git init
-heroku login
-heroku git:remote -a travel-mern</code></pre>
+<pre><code>heroku login
+heroku git:remote -a appName</code></pre>
 
 #### Initial commit
 <pre><code>git add .
@@ -27,3 +29,5 @@ heroku logs --tail
 // view heroku app
 heroku run bash
 </code></pre>
+
+>https://github.com/StephenGrider/ReactSSRCasts/blob/master/server/package.json

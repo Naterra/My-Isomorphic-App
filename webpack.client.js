@@ -1,5 +1,4 @@
-process.traceDeprecation = true;
-
+// process.traceDeprecation = true;
 const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');

@@ -15,10 +15,55 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader']
             },
+            // {
+            //     test: /\.(jpe?g|png|gif|svg)$/,
+            //     loader: "file-loader?name=/images/[name].[ext]"
+            // }
+            // {
+            //     test: /\.(gif|png|jpe?g|svg)$/i,
+            //     use: [
+            //         'file-loader',
+            //         {
+            //             loader: 'image-webpack-loader',
+            //             options: {
+            //                 bypassOnDebug: true, // webpack@1.x
+            //                 disable: true, // webpack@2.x and newer
+            //             },
+            //         },
+            //     ],
+            // }
             {
-                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
-                use: ['file-loader']
+                test: /.*\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            name: 'images/[name].[hash].[ext]',
+                            limit: 20000,
+                        },
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                            mozjpeg: {
+                                quality: 85,
+                            },
+                            pngquant: {
+                                quality: '80-90',
+                                speed: 1,
+                            },
+                        },
+                    },
+                ],
             }
+            // {
+            //     test: /\.(jpe?g|png|gif|svg)$/i,
+            //     loaders: [
+            //         'file?hash=sha512&digest=hex&name=[hash].[ext]',
+            //         'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            //     ]
+            // }
         ]
     },
     plugins: [
