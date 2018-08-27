@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+// import 'babel-polyfill';
 import express from 'express';
 import { matchRoutes } from 'react-router-config';
 import proxy from 'express-http-proxy';
@@ -51,7 +51,7 @@ app.get('*', (req, res) => {
 
 
 // Set  port
-console.log('PROCESS_PORT', process.env.PORT);
+console.log('NODE_ENV', process.env.NODE_ENV);
 app.set('port', process.env.PORT || config.serverPort);
 
 app.listen(app.get('port'), () => {

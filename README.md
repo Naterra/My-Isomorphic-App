@@ -1,5 +1,11 @@
 ## App
 
+#### Run Development Version on localhost:3000
+<pre><code>npm run dev</code></pre>
+
+
+
+
 #### Heroku
 <pre><code>git init
 heroku login

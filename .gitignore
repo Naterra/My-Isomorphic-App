@@ -2,7 +2,8 @@
 /node_modules
 
 #developement
-/config/dev.js
+config/dev.js
+config/prod.js
 
 
 #build
@@ -12,4 +13,7 @@ build_server
 .idea
 
 
-server/db/
+
+package-lock.json
+public/
+webpack-assets.json
