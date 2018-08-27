@@ -3,6 +3,9 @@
 #### Run Development Version on localhost:3000
 <pre><code>npm run dev</code></pre>
 
+#### Make a Build 
+it will generate a build_server folder
+<pre><code>npm run prod:compile_server</code></pre>
 
 
 

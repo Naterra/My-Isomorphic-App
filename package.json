@@ -9,12 +9,9 @@
   },
   "scripts": {
     "start": "node build_server/bundle.js",
-    "dev": "concurrently \"npm run server\"",
-    "build": "npm-run-all --parallel build:*",
+    "dev": "concurrently \"npm run server\" ",
+    "client": "",
     "server": "nodemon --exec   babel-node server/index.js",
-    "build:server": "nodemon --watch build_server --exec \"node build_server/server.js\"",
-    "build:build-server": "webpack --mode development --env.NODE_ENV=dev --config webpack.server.js --watch ",
-    "build:build-client": "webpack --mode development --config webpack.client.js --watch ",
     "prod:compile_server": "babel server -d build_server --presets es2017,stage-1",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false  npm install && npm run prod:compile_server"
   },
