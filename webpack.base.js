@@ -15,23 +15,6 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader']
             },
-            // {
-            //     test: /\.(jpe?g|png|gif|svg)$/,
-            //     loader: "file-loader?name=/images/[name].[ext]"
-            // }
-            // {
-            //     test: /\.(gif|png|jpe?g|svg)$/i,
-            //     use: [
-            //         'file-loader',
-            //         {
-            //             loader: 'image-webpack-loader',
-            //             options: {
-            //                 bypassOnDebug: true, // webpack@1.x
-            //                 disable: true, // webpack@2.x and newer
-            //             },
-            //         },
-            //     ],
-            // }
             {
                 test: /.*\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)$/i,
                 use: [
@@ -57,13 +40,6 @@ module.exports = {
                     },
                 ],
             }
-            // {
-            //     test: /\.(jpe?g|png|gif|svg)$/i,
-            //     loaders: [
-            //         'file?hash=sha512&digest=hex&name=[hash].[ext]',
-            //         'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-            //     ]
-            // }
         ]
     },
     plugins: [

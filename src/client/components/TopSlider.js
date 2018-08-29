@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import img from "../../../public/images/parallax1.jpg";
-import img from "../../../public/images/building.jpg";
+// import img from "../../../public/images/building.jpg";
 
 
 class TopSlider extends Component{
@@ -9,7 +9,7 @@ class TopSlider extends Component{
     render(){
         return(
             <div>
-                <img src={img}/>
+                <img src="/images/building.jpg"/>
 
                 <div className="parallax-container">
                     <div className="parallax"></div>

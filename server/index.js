@@ -8,11 +8,13 @@ import renderer from '../src/helpers/renderer';
 import createStore from '../src/helpers/createStore';
 import config from '../config/config.js';
 
+
+
 const app = express();
 
-// Serving static files
-// app.use('/public/images', express.static(path.resolve(__dirname, '/public/images')));
 
+// Serving static files
+app.use(express.static('../public/images'));
 
 
 app.use('/api', proxy('http://react-ssr-api.herokuapp.com', {

@@ -2,7 +2,11 @@ const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
+
+
+// Exclude node_modules from server build
 const webpackNodeExternals = require('webpack-node-externals');
+
 
 const config  = {
     // Inform webpack that we're buildiing a bundle
